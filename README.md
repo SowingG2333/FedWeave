@@ -67,7 +67,7 @@ The key design is an **asymmetric aggregation strategy**:
 Python 3.10 or newer and a CUDA-capable PyTorch installation are recommended.
 
 ```bash
-git clone <your-fedweave-repository-url>
+git clone https://github.com/SowingG2333/FedWeave.git
 cd FedWeave
 
 python3 -m venv .venv
