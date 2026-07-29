@@ -268,9 +268,3 @@ If this work is useful in your research, please cite the arXiv paper. The identi
 ## 📄 License
 
 FedWeave is released under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-  <sub>Built for reproducible research in heterogeneous federated adaptation.</sub>
-</div>
