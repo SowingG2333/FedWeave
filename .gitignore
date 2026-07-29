@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+
+outputs/
+results/
+wandb/
+swanlog/
+
+*.pt
+*.pth
+*.jsonl

@@ -1,0 +1,66 @@
+{
+  "protocol": "FedWeave controlled benchmark",
+  "tasks": [
+    {
+      "internal_name": "text_editing",
+      "paper_name": "CoEdIT",
+      "dataset_id": "grammarly/coedit",
+      "configuration": null,
+      "source_split_pool": ["train", "validation"],
+      "metric": "mean ROUGE-1/ROUGE-2/ROUGE-Lsum F1",
+      "max_new_tokens": 64
+    },
+    {
+      "internal_name": "math_reasoning",
+      "paper_name": "GSM8K",
+      "dataset_id": "openai/gsm8k",
+      "configuration": "main",
+      "source_split_pool": ["train", "test"],
+      "metric": "exact-answer accuracy",
+      "max_new_tokens": 192
+    },
+    {
+      "internal_name": "sentiment_analysis",
+      "paper_name": "TweetEval-Sentiment",
+      "dataset_id": "cardiffnlp/tweet_eval",
+      "configuration": "sentiment",
+      "source_split_pool": ["train", "validation", "test"],
+      "metric": "accuracy",
+      "max_new_tokens": 4
+    },
+    {
+      "internal_name": "commonsense_reasoning",
+      "paper_name": "ARC-Challenge",
+      "dataset_id": "allenai/ai2_arc",
+      "configuration": "ARC-Challenge",
+      "source_split_pool": ["train", "validation", "test"],
+      "metric": "exact-answer accuracy",
+      "max_new_tokens": 4
+    }
+  ],
+  "sampling": {
+    "train_examples_per_task": 2000,
+    "validation_examples_per_task": 100,
+    "test_examples_per_task": 400,
+    "disjoint_across_constructed_splits": true,
+    "sampling_algorithm": "NumPy default_rng permutation over pooled (source_split, source_index) references",
+    "run_seeds": [42, 43, 44],
+    "cache_records_source_split_and_index": true
+  },
+  "federated_partition": {
+    "number_of_clients": 20,
+    "distribution": "task-identity Dirichlet partition",
+    "dirichlet_alpha_main": 0.3,
+    "dirichlet_alpha_sweep": [0.1, 0.3, 0.5],
+    "client_partition_seed_matches_run_seed": true,
+    "empty_clients_rebalanced_deterministically": true
+  },
+  "models": [
+    "meta-llama/Llama-3.2-3B",
+    "google/gemma-2-2b"
+  ],
+  "sequence_and_decoding": {
+    "maximum_training_length": 512,
+    "decoding": "greedy"
+  }
+}
