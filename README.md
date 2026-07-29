@@ -43,9 +43,6 @@ The key design is an **asymmetric aggregation strategy**:
 
 <p align="center">
   <img src="assets/fedweave_overview.png" width="100%" alt="FedWeave framework overview">
-</p>
-
-<p align="center">
   <em>
     FedWeave discovers and aligns client-local prototypes, aggregates experts at prototype
     granularity, trains the router along complete client trajectories, and supports sparse inference.
