@@ -8,10 +8,13 @@
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white">
   <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white">
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-2EA44F">
-  <img alt="Paper: arXiv" src="https://img.shields.io/badge/Paper-coming%20soon-B31B1B?logo=arxiv&logoColor=white">
+  <a href="https://arxiv.org/abs/2607.26618">
+    <img alt="Paper: arXiv 2607.26618" src="https://img.shields.io/badge/arXiv-2607.26618-B31B1B?logo=arxiv&logoColor=white">
+  </a>
 </p>
 
 <p>
+  <a href="https://arxiv.org/abs/2607.26618">Paper</a> •
   <a href="#-overview">Overview</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-reproducing-the-paper">Reproduction</a> •
@@ -255,12 +258,13 @@ bash scripts/eval/metrics.sh \
 
 ## 📜 Citation
 
-If this work is useful in your research, please cite the arXiv paper. The identifier will be added after assignment.
+If this work is useful in your research, please cite our [arXiv paper](https://arxiv.org/abs/2607.26618).
 
 ```bibtex
 @article{duan2026fedweave,
   title   = {FedWeave: Rethinking the Unit of Specialization in Heterogeneous Federated MoE-LoRA},
   author  = {Duan, Donghang and Zheng, Xu and Zhang, Lizong and Mu, Chong and Han, Meng},
+  journal = {arXiv preprint arXiv:2607.26618},
   year    = {2026}
 }
 ```
